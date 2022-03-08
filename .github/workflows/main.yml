@@ -20,6 +20,8 @@ jobs:
         id: diag_before
         run: |
           pwd
+          env
+          ls -laF ../ || true
           ls -laF * || true
       - name: Hello world action step
         id: hello
