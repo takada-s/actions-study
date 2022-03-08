@@ -28,7 +28,7 @@ jobs:
         uses: takada-s/hello-world-docker-action@v1.2.0
         with:
           who-to-greet: "john doe"
-          output-dir: ${{ github.workspace }}/outdir1
+          output-dir: outdir1
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: diag-after
@@ -38,11 +38,11 @@ jobs:
           ls -laF * || true
       - name: show_outputs
         id: show_outputs
-        run: cat ${{ github.workspace }}/outdir1/*
+        run: cat outdir1/*
       - name: upload artifacts
         id: upload_artifacts
         uses: actions/upload-artifact@v3
         with:
           name: test-artifacts
-          path: ${{ github.workspace }}/outdir1
+          path: outdir1
 
