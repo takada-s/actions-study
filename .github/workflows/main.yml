@@ -20,7 +20,7 @@ jobs:
         id: diag_before
         run: |
           pwd
-          ls -laF *
+          ls -laF * || true
       - name: Hello world action step
         id: hello
         uses: takada-s/hello-world-docker-action@v1.2.0
@@ -33,7 +33,7 @@ jobs:
         id: diag_after
         run: |
           pwd
-          ls -laF *
+          ls -laF * || true
       - name: show_outputs
         id: show_outputs
         run: cat ${{ github.workspace }}/outdir1/*
