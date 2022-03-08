@@ -22,5 +22,5 @@ jobs:
         with:
           who-to-greet: "john doe"
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
 
