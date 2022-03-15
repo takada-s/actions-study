@@ -14,6 +14,9 @@ jobs:
         with:
           who-to-greet: "john doe"
           output-dir: $OUT_DIR
+      - name: failing step
+        id: fails
+        run: /usr/bin/false
       - name: upload artifacts
         id: upload_artifacts
         uses: actions/upload-artifact@v3
