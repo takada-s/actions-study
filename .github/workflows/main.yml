@@ -1,4 +1,9 @@
-on: [push]
+on: 
+  push:
+    branches:
+      - master
+      - main
+      - releases/**
 
 jobs:
   composite_hello_world_job:

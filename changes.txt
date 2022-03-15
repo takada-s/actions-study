@@ -1,4 +1,4 @@
 this file will be changed during actions test.
 
-branch 1 is here.
+i hope main.yml jobs will not be fired on PRs.
 
