@@ -2,3 +2,4 @@ this file will be changed during actions test.
 
 i hope main.yml jobs will not be fired on PRs.
 
+this changeset will fail
