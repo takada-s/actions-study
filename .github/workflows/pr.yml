@@ -13,7 +13,7 @@ jobs:
         uses: takada-s/hello-world-docker-action@v1.2.0
         with:
           who-to-greet: "john doe"
-          output-dir: $OUT_DIR
+          output-dir: ${{ env.OUT_DIR }}
       - name: not-failing step
         id: not-fails
         run: /usr/bin/true
@@ -22,4 +22,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: pr-artifacts
-          path: $OUT_DIR
+          path: ${{ env.OUT_DIR }}
+
